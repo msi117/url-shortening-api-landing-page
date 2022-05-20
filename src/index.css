@@ -12,7 +12,7 @@
   /* Neutral Colors */
   --Gray: hsl(0, 0%, 75%);
   --Grayish-Violet: hsl(257, 7%, 63%);
-  --Very-Dark-Blue: hsl(255, 11%, 22%);
+  --Very-Dark-Blue: hsl(256, 36%, 25%);
   --Very-Dark-Violet: hsl(260, 8%, 14%);
 
 
@@ -75,6 +75,8 @@ button {
   background-color: inherit;
   text-align: center;
   cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 button:hover {
@@ -84,7 +86,7 @@ button:hover {
 }
 
 section {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   display: flex;
   gap: 2rem;
   height: 20rem;
@@ -109,4 +111,23 @@ h1 {
   /* border: 1px solid red; */
   width: 50%;
   background: 50% / 20rem 19rem  url("./images/illustration-working.svg") no-repeat;
+}
+
+aside {
+  border: 1px solid red;
+  height: 25%;
+  background: 0 0 / 100% 100% url("./images/bg-boost-desktop.svg") var(--Very-Dark-Blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 0;
+}
+
+h3 {
+  color: white;
+}
+
+.started {
+  margin-top: -.8rem;
+  margin-bottom: 1rem;
 }
