@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Logo from "../images/logo.svg";
 function Header() {
@@ -6,9 +7,9 @@ function Header() {
       <div className="header-container">
         <nav>
           <img src={Logo}  alt="Shortly Logo" />
-          <p>Features</p>
-          <p>Pricing</p>
-          <p>Resources</p>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
         </nav>
         <div className="logins-container">
           <button className="btn">Login</button>
