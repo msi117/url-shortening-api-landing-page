@@ -70,9 +70,9 @@ button {
   /* height: 24px; */
   font-size: .7rem;
   font-family: inherit;
-  color: var(--Grayish-Violet);
+  color: white;
   border: none;
-  background-color: inherit;
+  background-color: var(--cyan);
   text-align: center;
   cursor: pointer;
   padding: 5px 10px;
@@ -82,7 +82,7 @@ button {
 button:hover {
   color: white;
   background-color: var(--cyan);
-  font-weight: 700;
+  transform: scale(1.1);
 }
 
 section {
@@ -98,19 +98,20 @@ section {
   /* border: 1px solid red; */
   width: 50%;
 }
+
 h1 {
   font-size: 2.5rem;
   line-height: 2.8rem;
 }
 
-.left p{
+.left p {
   margin-top: -30px;
 }
 
 .right {
   /* border: 1px solid red; */
   width: 50%;
-  background: 50% / 20rem 19rem  url("./images/illustration-working.svg") no-repeat;
+  background: 50% / 20rem 19rem url("./images/illustration-working.svg") no-repeat;
 }
 
 aside {
@@ -124,10 +125,88 @@ aside {
 }
 
 h3 {
-  color: white;
+  color: black;
+  padding: 1rem;
+  font-weight: 700;
 }
 
 .started {
   margin-top: -.8rem;
   margin-bottom: 1rem;
+}
+
+article {
+  background-color: rgb(244, 244, 255);
+}
+
+.head {
+  padding: 1rem;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.head p {
+  margin-top: -30px;
+  color: rgb(135, 132, 132);
+  font-size: .7rem;
+  line-height: .8rem;
+}
+
+.tail {
+  /* position: relative; */
+}
+.details-container {
+  display: flex;
+  padding: 1rem;
+  gap: 1.2rem;
+  /* border: 1px solid red; */
+  height: 15rem;
+}
+
+p {
+  font-size: .7rem;
+  margin-top: -20px;
+  line-height: .8rem;
+}
+
+.box {
+  background-color: white;
+  padding: .5rem;
+  z-index: 1;
+  border-radius: 5px;
+  position: relative;
+}
+
+.box1 {
+  align-self: flex-start;
+}
+.box2 {
+  align-self: center;
+  
+}
+.box3 {
+  align-self: flex-end;
+}
+
+.line {
+  width: 50%;
+  border: 3px solid var(--cyan);
+  position: relative;
+  top: -150px;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--Very-Dark-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -35px;
+  left: 15px;
 }
