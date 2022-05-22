@@ -34,7 +34,7 @@ a {
   font-size: .9rem;
   color: var(--Gray);
   text-decoration: none;
-  
+
 }
 
 
@@ -156,10 +156,6 @@ article {
   color: rgb(135, 132, 132);
   font-size: .7rem;
   line-height: .8rem;
-}
-
-.tail {
-  /* position: relative; */
 }
 
 .details-container {
@@ -294,7 +290,6 @@ a {
 .combined {
   display: flex;
   align-items: center;
-
 }
 
 .copy-button {
@@ -304,7 +299,6 @@ a {
   padding: 0;
   margin-right: 15px;
 }
-
 
 /* extra button */
 .hidden {
@@ -324,7 +318,6 @@ footer {
 
 }
 
-
 .lists {
   display: flex;
 }
@@ -338,7 +331,6 @@ h6 {
 
 ul {
   list-style: none;
-
 }
 
 li {
@@ -346,8 +338,6 @@ li {
   color: var(--Gray);
   margin-bottom: 5px;
   cursor: pointer;
-
-
 }
 
 .social-icons {
@@ -367,15 +357,11 @@ li {
 @media screen and (max-width: 375px) {
   .hidden {
     display: block;
-
   }
 
   #menu {
     background: none;
-
   }
-
-
 
   nav,
   .logins-container {
@@ -432,8 +418,6 @@ li {
     text-align: center;
   }
 
-
-
   .right {
     order: 1;
     width: 90%;
@@ -449,7 +433,7 @@ li {
 
   input[type='text'] {
     width: 95%;
-   padding: .5rem;
+    padding: .5rem;
   }
 
   .url-container button {
@@ -481,7 +465,7 @@ li {
   }
 
 
-  .head p{
+  .head p {
     padding-top: 5px;
   }
 
@@ -537,7 +521,6 @@ li {
     margin-bottom: -10%;
   }
 
-
   .lists {
     margin-left: -10%;
     flex-direction: column;
@@ -547,8 +530,6 @@ li {
   h6 {
     font-size: 1.2rem;
   }
-
-
 
   li {
     font-size: 1rem;

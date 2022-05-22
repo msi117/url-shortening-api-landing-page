@@ -32,18 +32,10 @@ function FormComponent() {
 
   };
 
-
-  const handleTest = () => {
-      console.log('test button clicked');
-      console.log(url,links);
-  }
-
   return (
     <div>
 
       <div className="url-container">
-        {/* <button onClick={handleTest}>testing button</button> */}
-
         <input
           type="text"
           name="url"
