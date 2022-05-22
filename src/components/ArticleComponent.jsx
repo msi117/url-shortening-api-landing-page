@@ -1,28 +1,14 @@
-import React, { useState } from "react";
 import Brand from "../images/icon-brand-recognition.svg";
 import Detail from "../images/icon-detailed-records.svg";
 import Fully from "../images/icon-fully-customizable.svg";
 import FormComponent from "./FormComponent";
 
 function ArticleComponent() {
-  const [data, setData] = useState({});
-
-  const getShortUrl = async () => {
-    const req = await fetch(
-      `https://api.shrtco.de/v2/shorten?url=https://apple.com`
-    );
-    const res = await req.json();
-    console.log(res.ok);
-    setData(res);
-  };
-
   return (
     <article>
       <div className="article">
-          <div className="formcomponent">
-              {/* todo Form Component */}
-              <FormComponent />
-          </div>
+        <FormComponent />
+
         <div className="head">
           <h3>Advanced Statistics</h3>
           <p>
