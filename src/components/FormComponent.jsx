@@ -55,9 +55,9 @@ function FormComponent() {
           Shorten it!
         </button>
       </div>
-      <div className="added-links">
+      {/* <div className="added-links"> */}
         {links ? links.map((link) => <LinksComponent key={link.result.code} link={link} />) : ""}
-      </div>
+      {/* </div> */}
     </div>
   );
 }

@@ -21,21 +21,20 @@
 body {
   margin: 0;
   padding: 0;
+  /* width: 1280px;
+  margin: 0 auto; */
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  /* border: 1px red solid; */
-}
 
-/* Universal styling p */
 a {
-  font-size: .7rem;
-  color: var(--Grayish-Violet);
+  font-size: .9rem;
+  color: var(--Gray);
   text-decoration: none;
+  
 }
 
 
@@ -48,10 +47,12 @@ a {
 }
 
 nav {
-  /* border: 1px red solid; */
+  color: gray;
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-grow: 1;
+  margin-left: 2rem;
 }
 
 nav img {
@@ -66,8 +67,8 @@ nav img {
 }
 
 button {
-  /* width: 64px; */
-  /* height: 24px; */
+  width: fit-content;
+  height: 2rem;
   font-size: .7rem;
   font-family: inherit;
   color: white;
@@ -75,7 +76,7 @@ button {
   background-color: var(--cyan);
   text-align: center;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: .5rem 1rem;
   border-radius: 20px;
 }
 
@@ -90,8 +91,9 @@ section {
   display: flex;
   gap: 2rem;
   height: 20rem;
-  width: 100%;
+  width: 80%;
   padding: 0 2rem;
+  margin: 0 auto;
 }
 
 .left {
@@ -100,22 +102,20 @@ section {
 }
 
 h1 {
-  font-size: 2.5rem;
-  line-height: 2.8rem;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 .left p {
-  margin-top: -30px;
+  margin-top: -2rem;
 }
 
 .right {
-  /* border: 1px solid red; */
   width: 50%;
-  background: 50% / 20rem 19rem url("./images/illustration-working.svg") no-repeat;
+  background: center top / 90% 85% url("./images/illustration-working.svg") no-repeat;
 }
 
 aside {
-  /* border: 1px solid red; */
   height: 25%;
   background: 0 0 / 100% 100% url("./images/bg-boost-desktop.svg") var(--Very-Dark-Blue);
   display: flex;
@@ -140,6 +140,7 @@ h3 {
 }
 
 article {
+  margin-top: 1rem;
   background-color: rgb(244, 244, 255);
 }
 
@@ -162,11 +163,13 @@ article {
 }
 
 .details-container {
+  width: 80%;
+  margin: auto;
   display: flex;
-  padding: 1rem;
   gap: 1.2rem;
   /* border: 1px solid red; */
   height: 15rem;
+  margin-bottom: .5rem;
 }
 
 p {
@@ -221,7 +224,7 @@ p {
 .url-container {
   width: 80%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 1.5rem .5rem;
   position: relative;
   top: -2.25rem;
   background: 0 0 / 100% 100% url("./images/bg-shorten-desktop.svg") var(--Very-Dark-Blue);
@@ -235,7 +238,7 @@ p {
 
 input[type='text'] {
   width: 75%;
-  padding: 5px;
+  padding: 1rem;
   border-radius: 5px;
   border: none;
 }
@@ -245,19 +248,26 @@ input[type='text']::placeholder {
 }
 
 #shorten {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .added-links {
   width: 80%;
-  /* border: 1px solid red; */
+  padding: .5rem;
   margin: 0 auto;
   margin-top: -1rem;
 }
 
 .url {
+  width: 80%;
+  margin: 0 auto;
   background-color: white;
+  padding: .5rem;
   margin-bottom: .7rem;
   border-radius: 5px;
   display: flex;
@@ -305,25 +315,18 @@ a {
 }
 
 footer {
-  background-color: var(--Very-Dark-Violet) ;
+  background-color: var(--Very-Dark-Violet);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 2rem 0;
-  
+
 }
 
-.footer-container  {
-  
-}
 
 .lists {
   display: flex;
-}
-
-.list-container {
-
 }
 
 h6 {
@@ -335,14 +338,15 @@ h6 {
 
 ul {
   list-style: none;
-  
+
 }
+
 li {
   font-size: .7rem;
   color: var(--Gray);
   margin-bottom: 5px;
   cursor: pointer;
-  
+
 
 }
 
@@ -355,6 +359,7 @@ li {
   padding: 5px;
   cursor: pointer;
 }
+
 .social-icons img:hover {
   fill: var(--cyan);
 }
@@ -409,13 +414,14 @@ li {
     margin-top: 50px;
   }
 
-  header {}
+  header {
+    width: 90%;
+  }
 
   section {
     flex-direction: column;
     gap: 0;
     padding: 0;
-    width: 100%;
     height: 30rem;
     padding-bottom: 2rem;
   }
@@ -437,27 +443,31 @@ li {
   }
 
   .url-container {
-    width: 90%;
+    margin: 0 auto;
     flex-direction: column;
   }
 
   input[type='text'] {
     width: 95%;
+   padding: .5rem;
   }
 
   .url-container button {
-    width: 95%;
-    padding: 5px;
+    width: 90%;
   }
 
   .added-links {
     width: 95%;
+    border: 1ps solid green;
   }
 
   .url {
+    width: 80%;
+    margin: 0 auto;
     flex-direction: column;
     align-content: center;
     align-items: center;
+    margin-bottom: .5rem;
   }
 
   .combined {
@@ -471,13 +481,8 @@ li {
   }
 
 
-  article {
-    height: 900px;
-  }
-
-  .head {
-    width: 80%;
-    padding: 0;
+  .head p{
+    padding-top: 5px;
   }
 
   .tail {
@@ -485,7 +490,9 @@ li {
   }
 
   .details-container {
+    height: fit-content;
     flex-direction: column;
+
   }
 
   .box {
@@ -510,8 +517,6 @@ li {
     line-height: 1rem;
   }
 
-  aside {}
-
   aside button {
     width: 10rem;
     height: 2.5rem;
@@ -531,7 +536,7 @@ li {
   .footer-container {
     margin-bottom: -10%;
   }
-  
+
 
   .lists {
     margin-left: -10%;
