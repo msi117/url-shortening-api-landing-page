@@ -20,21 +20,15 @@ function FormComponent() {
   const fetchUrl = async (value) => {
     const req = await fetch(`https://api.shrtco.de/v2/shorten?url=${value}`);
     const res = await req.json();
-    console.log( typeof res, res  );
 
-    const updated_list = [
-        ...links,
-        res
-    ]
+    const updated_list = [...links, res];
 
-    setLinks(updated_list)
-
-
+    setLinks(updated_list);
   };
+
 
   return (
     <div>
-
       <div className="url-container">
         <input
           type="text"
@@ -47,9 +41,11 @@ function FormComponent() {
           Shorten it!
         </button>
       </div>
-      {/* <div className="added-links"> */}
-        {links ? links.map((link) => <LinksComponent key={link.result.code} link={link} />) : ""}
-      {/* </div> */}
+      {links
+        ? links.map((link) => (
+            <LinksComponent key={link.result.code} link={link} />
+          ))
+        : ""}
     </div>
   );
 }
