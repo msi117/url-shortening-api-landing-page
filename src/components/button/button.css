@@ -1,0 +1,16 @@
+.btn {
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    background-color: var(--cyan);
+    color: whitesmoke;
+    margin: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+
+.btn:hover {
+    opacity: 0.8;
+}

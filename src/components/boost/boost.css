@@ -1,0 +1,35 @@
+.boost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: 0 0 / 100% 100% url("../../images/bg-boost-desktop.svg") var(--Very-Dark-Blue);
+}
+
+.boost h2 {
+    font-size: 50px;
+    color: whitesmoke;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.boost button {
+    font-size: 16px;
+    padding: 15px 40px;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 650px) {
+    .boost h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .boost h2 {
+        font-size: 30px;
+    }
+    .boost button {
+        font-size: 12px;
+    }
+}

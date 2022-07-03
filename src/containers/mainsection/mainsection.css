@@ -1,0 +1,110 @@
+.mainsection {
+    background-color: rgb(240, 240, 246);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.mainsection__input {
+    position: relative;
+    top: -60px;
+    width: 80%;
+    padding: 1rem 0;
+    background: 0 0 / 100% 100% url("../../images/bg-shorten-desktop.svg") var(--Very-Dark-Blue);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainsection__input input {
+    flex: 2;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.mainsection__output {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainsection__output--links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    background-color: whitesmoke;
+    border-radius:  10px;
+    width: 100%;
+}
+
+.mainsection__output--links a{
+    text-decoration: none;
+    color: var(--cyan);
+}
+
+.mainsection__output--links button:focus {
+    background-color: var(--Very-Dark-Blue);
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .mainsection__input {
+        width: 100%;
+    }
+    .mainsection__output {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mainsection__input {
+        flex-direction: column;    
+    }
+
+    .mainsection__input input {
+        width: 85%;
+    }
+
+    .mainsection__input button {
+        width: 95%;
+    }
+
+    .mainsection__output--links {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .mainsection__output--links span {
+        width: 100%;
+        border: 1px solid var(--Grayish-Violet);
+
+
+    }
+
+    .mainsection__output--links p {
+        width: 90%;
+        color: var(--Very-Dark-Violet);
+        overflow: hidden;
+    }
+
+    .mainsection__output--links a{
+        width: 90%;
+        margin-top: 5px;
+    }
+
+    .mainsection__output--links button {
+        margin-top: 5px;
+        width: 90%;
+    }
+
+}
