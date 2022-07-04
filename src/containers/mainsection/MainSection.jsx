@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { useState } from "react";
 import Button from "../../components/button/Button";
 import Features from "../../components/features/Features";
@@ -5,6 +6,7 @@ import "./mainsection.css";
 function MainSection() {
   const [url, setUrl] = useState("");
   const [links, setLinks] = useState([]);
+  const ref = useRef()
 
   const handleChange = (e) => {
     setUrl(e.target.value);
@@ -15,13 +17,29 @@ function MainSection() {
     fetchUrl(url);
   };
 
-  const fetchUrl = async (value) => {
-    const req = await fetch(`https://api.shrtco.de/v2/shorten?url=${value}`);
-    const res = await req.json();
-    const updated_list = [...links, res];
 
-    setLinks(updated_list);
+
+  const invalidUrl = () => {
+    // alert("Invalid Url");
+    ref.current.style.border = '2px solid red'
+
+  }
+
+  //@Todo URL check 
+  const fetchUrl = async (value) => {
+    if (value === "") {
+      invalidUrl()
+      
+      
+    } else {
+      const req = await fetch(`https://api.shrtco.de/v2/shorten?url=${value}`);
+      const res = await req.json();
+      const updated_list = [...links, res];
+
+      setLinks(updated_list);
+    }
   };
+
   return (
     <div className="mainsection paddings">
       <div className="mainsection__input">
@@ -32,6 +50,7 @@ function MainSection() {
           value={url}
           placeholder="Shorten a link here"
           onChange={handleChange}
+          ref={ref}
         />
         <Button
           text="shorten It!"
@@ -59,7 +78,6 @@ function MainSection() {
               onClick={(e) => {
                 e.target.innerText = "Copied!";
                 navigator.clipboard.writeText(link.result.full_short_link);
-
               }}
               style={{
                 borderRadius: 5,
