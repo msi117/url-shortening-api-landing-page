@@ -5,13 +5,13 @@ import MainSection from "./containers/mainsection/MainSection";
 import Navbar from "./containers/navbar/Navbar";
 function App() {
   return (
-   <div className="app">
-    <Navbar />
-    <Hero />
-    <MainSection />
-    <Boost />
-    <Footer />
-   </div>
+    <div className="app">
+      <Navbar />
+      <Hero />
+      <MainSection />
+      <Boost />
+      <Footer />
+    </div>
   );
 }
 

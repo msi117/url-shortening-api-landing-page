@@ -1,50 +1,84 @@
-import Button from '../../components/button/Button'
-import './navbar.css'
-import {ReactComponent as Logo} from '../../images/logo.svg'
-import {ReactComponent as Menu} from '../../images/menu.svg'
-import { useState } from 'react'
-
+import Button from "../../components/button/Button";
+import "./navbar.css";
+import logo from "../../images/logo.svg";
+import menu from "../../images/menu.svg";
+import { useState } from "react";
+import { IoMenu, IoCloseSharp } from "react-icons/io5";
 
 function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
 
-    const [menu, setMenu] = useState(false)
+  const handleMenu = () => {
+    setShowMenu(!showMenu);
+    console.log(showMenu);
+  };
+  const loginStyle = {
+    backgroundColor: "inherit",
+    color: "var(--Grayish-Violet)",
+  };
+  const links = [
+    {
+      id: 1,
+      name: "Features",
+      url: "#features",
+    },
+    {
+      id: 2,
+      name: "Pricing",
+      url: "#pricing",
+    },
+    {
+      id: 3,
+      name: "Resources",
+      url: "Rerources",
+    },
+  ];
 
-
-
-    const loginStyle = {
-        backgroundColor: 'inherit',
-        color: 'var(--Grayish-Violet)'
-    }
   return (
-    <div className='navbar margins'>
-        <Logo />
+    <nav>
+      <div className="navbar">
+        <div className="navbar__logo">
+          <img src={logo} alt="logo" />
+        </div>
+
         <div className="navbar__navlinks">
-            <p><a href="#features">Features</a></p>
-            <p><a href="#pricing">Pricing</a></p>
-            <p><a href="#resources">Resources</a></p>
+          {links.map((link) => (
+            <a key={link.id} href={link.url}>
+              {link.name}
+            </a>
+          ))}
         </div>
+
         <div className="navbar__logins">
-            <Button text='Login' style={loginStyle} />
-            <Button text='Sign Up' />
+          <Button text="Login" style={loginStyle} />
+          <Button text="Sign Up" />
         </div>
+
         <div className="navbar__menu">
-            <Menu onClick={() => setMenu((prev) => !prev)}/>
+          {showMenu ? (
+            <IoCloseSharp onClick={handleMenu} />
+          ) : (
+            <IoMenu onClick={handleMenu} />
+          )}
         </div>
-        {
-                menu && <div className='navbar__mobile margins paddings'>
-                    <div className='navbar__mobile--links'>
-                        <a href="#features">Features</a>
-                        <a href="#pricing">Pricing</a>
-                        <a href="#resources">Resources</a>
-                    </div>
-                    <div className='navbar__mobile--logins'>
-                        <Button text='Login' style={loginStyle} />
-                        <Button text='Sign Up' />
-                    </div>
-                </div>
-        }
-    </div>
-  )
+        {showMenu ? (
+          <div className="navigation__sidebar">
+            <div className="navbar__logins--mobile">
+              <Button text="Login" style={loginStyle} />
+              <Button text="Sign Up" />
+            </div>
+            <div className="navbar__navlinks--mobile">
+              {links.map((link) => (
+                <a key={link.id} href={link.url}>
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : null}
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
