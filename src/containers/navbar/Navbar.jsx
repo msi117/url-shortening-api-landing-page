@@ -56,7 +56,10 @@ function Navbar() {
 
         <div className="navbar__menu">
           {showMenu ? (
-            <IoCloseSharp onClick={handleMenu} />
+            <IoCloseSharp
+              fill={showMenu ? "white" : "black"}
+              onClick={handleMenu}
+            />
           ) : (
             <IoMenu onClick={handleMenu} />
           )}
